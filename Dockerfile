@@ -6,7 +6,7 @@ RUN useradd -d /mapdraw -k /dev/null -m -s /bin/bash mapdraw
 COPY files/php-fpm.conf /etc/php/8.4/fpm/pool.d/www.conf
 
 USER mapdraw
-RUN cd && git clone config-json https://github.com/linke-tools/mapdraw.git
+RUN cd && git clone https://github.com/linke-tools/mapdraw.git
 
 COPY files/entrypoint.sh /entrypoint.sh
 
